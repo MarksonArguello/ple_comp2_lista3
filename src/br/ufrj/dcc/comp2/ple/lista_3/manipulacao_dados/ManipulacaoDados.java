@@ -12,6 +12,12 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.zip.GZIPInputStream;
 
+/**
+ * Classe responsável por manipular os dados.
+ * <p>
+ *     Nessa classe lemos a entrada do usuário e criamos listas para criar os rankings e o gráfico
+ * </p>
+ */
 public class ManipulacaoDados {
 
     private static final String path = "./src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/caso.csv.gz";
@@ -28,6 +34,15 @@ public class ManipulacaoDados {
     private Dado anterior = null;
 
 
+    /**
+     * Construtor da classe ManipulacaoDados
+     *
+     * <p>
+     *     Nesse método chamamos os métodos para ler a entrada do usuário, criar a lista para o gráfico de acordo
+     *     com o que o usuário digitou e chamamos a classe PaaginaWeb se foram achados dados sobre o lugar que o
+     *     usuário digitou. Além disso chamados a classe Ranking para a criação dos 5 arquivos de ranking.
+     * </p>
+     */
     public ManipulacaoDados() {
         int dados = lerEntrada();
         long start = System.currentTimeMillis();
@@ -44,7 +59,17 @@ public class ManipulacaoDados {
         System.out.println("Tudo foi executado em " + (float) elapsed / 1000.0 + " segundos.");
     }
 
-    public int lerEntrada() {
+    /**
+     * Lê a entrada do usuário e retorna o número dados na entrada.
+     *
+     * <p>
+     *     Lê a entrada e retorna 2 se o usuário digitou estado e cidade, 1 se o usuário digitou apenas estado e
+     *     0 se não digitou nada. A separação de estado e cidade é feita atráves do //.
+     * </p>
+     *
+     * @return Número de dados digitados pelo usuário.
+     */
+    private int lerEntrada() {
         System.out.println("Digite a cidade  e depois a sigla do estado separados por barra '//':");
 
         ArrayList<String> lista = new ArrayList<String>(Arrays.asList(sc.nextLine().split("//")));
@@ -60,7 +85,15 @@ public class ManipulacaoDados {
         return lista.size();
     }
 
-    public boolean criarListas() {
+    /**
+     * Método responável por abrir o arquivo.
+     * <p>
+     *     Esse método abre o arquivo que será usado para os dados, caso consiga abrir chama o método lerLista().
+     *     Retorna true se conseguiu ler pelo menos um arquivo e false caso não tenha lido nenhum dado.
+     * </p>
+     * @return booleano indicando se conseguiu ler pelo menos um dado correspondente a entrada do usuário.
+     */
+    private boolean criarListas() {
         try (GZIPInputStream gzipInputStream = new GZIPInputStream(new FileInputStream(path))) {
             Scanner scannerZip = new Scanner(gzipInputStream);
             return lerLista(scannerZip);
@@ -75,6 +108,15 @@ public class ManipulacaoDados {
         }
     }
 
+    /**
+     * Método que transorma as linhas do arquivo em um array de String
+     * <p>
+     *     Esse método transorma as linhas do arquivo em um array de String e passa esse array como argumento para
+     *     as classes que criaram as listas para a pagina web e os rankings.
+     * </p>
+     * @param scannerZip scanner do arquivo
+     * @return booleano indicando se conseguiu ler pelo menos um dado correspondente a entrada do usuário.
+     */
     private boolean lerLista(Scanner scannerZip) {
         while (scannerZip.hasNextLine()) {
             String[] aux = scannerZip.nextLine().split(",");
@@ -92,6 +134,16 @@ public class ManipulacaoDados {
         }
     }
 
+    /**
+     * Enche as listas para os rankings com dados.
+     *
+     * <p>
+     *     Lê os dados e enche duas listas, a dadosParaTaxaDeCrescimento para o ranking com as cidades com maior
+     *     taxa de crescimento de casos (verifica de 01/09/2020 até 01/10/2020 apenas) e outra lista chamada
+     *     dadosParaRankings que é usada para os outros arquivos.
+     * </p>
+     * @param aux Array de String com os dados da cidade/estado
+     */
     private void criarListasRanking(String[] aux) {
         if (aux[3].equals("city")) {
             Dado dadoAuxliar = lerDado(aux);
@@ -109,6 +161,14 @@ public class ManipulacaoDados {
 
     }
 
+    /**
+     * Enche as listas para a pagina web com dados.
+     *
+     * <p>
+     *     lê os dados e guarda na lista os dados compativeis com a entrada do usuário.
+     * </p>
+     * @param aux Array de String com os dados da cidade/estado
+     */
     private void criaListaPaginaWeb(String[] aux) {
         Dado dadoAuxiliar = lerDado(aux);
         if (dadoAuxiliar == null)
@@ -124,7 +184,14 @@ public class ManipulacaoDados {
         }
     }
 
-    public void criaListaParaBrazil() {
+    /**
+     * Enche a lista totalPais  com os dados do Brasil para o gráfico na pagina web.
+     * <p>
+     *     Esse método foi criado pois quando queremos saber o dados do Brasil inteiro precisamos pegar os casos
+     *     e as mortes de cada estado e soma-los de acordo com suas datas.
+     * </p>
+     */
+    private void criaListaParaBrazil() {
         try {
             DataComparator dataComparator = new DataComparator();
             Collections.sort(listaDadoGrafico, dataComparator);
@@ -167,7 +234,11 @@ public class ManipulacaoDados {
         }
     }
 
-
+    /**
+     * Lê os dados do array de String e passa para um objeto do tipo Dado.
+     * @param aux Array de String com os dados da cidade/estado
+     * @return Um objeto do tipo Dado com os dados da linha do array de String.
+     */
     private Dado lerDado(String[] aux) {
         int populacao = 0, casos = 0, mortes = 0;
         if (!aux[8].isEmpty()) {

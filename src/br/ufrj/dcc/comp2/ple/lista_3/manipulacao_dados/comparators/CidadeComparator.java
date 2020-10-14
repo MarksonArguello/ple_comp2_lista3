@@ -4,6 +4,9 @@ import br.ufrj.dcc.comp2.ple.lista_3.manipulacao_dados.Dado;
 
 import java.util.Comparator;
 
+/**
+ * Classe que representa um comparador de nome das cidades
+ */
 public class CidadeComparator implements Comparator<Dado> {
     @Override
     public int compare(Dado o1, Dado o2) {
