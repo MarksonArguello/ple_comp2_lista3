@@ -1,115 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22c4ecf4-bf85-4977-9dc3-c92a19c68f6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/Dado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/caso.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/caso.csv.gz" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/caso.csv.gz" afterDir="false" />
+    <list default="true" id="e305d3a0-0f3f-4d57-a265-be7a0b59e879" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/aplicacao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/aplicacao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/criacaoArquivos/PaginaWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/criacaoArquivos/PaginaWeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/criacaoArquivos/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/criacaoArquivos/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/Dado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/Dado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/ManipulacaoDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/ManipulacaoDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/CasosPor100kComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/CasosPor100kComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/CidadeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/CidadeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/DataComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/DataComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/EstadoComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/EstadoComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/MortePorCasosComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/MortePorCasosComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/TaxaDeCrescimentoComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrj/dcc/comp2/ple/lista_3/manipulacao_dados/comparators/TaxaDeCrescimentoComparator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1igsR1ju1eqxMvZMDEZDzdf5X1N" />
+  <component name="ProjectId" id="1it2gYCQ0MdF0GIJhbuFDDJKdoS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.ufrj.dcc.comp2.ple.lista_3.aplicacao.Main" />
-      <module name="Lista3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.ufrj.dcc.comp2.ple.lista_3.aplicacao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="22c4ecf4-bf85-4977-9dc3-c92a19c68f6f" name="Default Changelist" comment="" />
-      <created>1602340557463</created>
+      <changelist id="e305d3a0-0f3f-4d57-a265-be7a0b59e879" name="Default Changelist" comment="" />
+      <created>1602712678024</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602340557463</updated>
+      <updated>1602712678024</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="65" key="#com.intellij.ide.util.MemberChooser" timestamp="1602652731958">
+    <state x="430" y="83" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602718857159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="65" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602652731958" />
-    <state x="440" y="258" width="508" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602705791521">
+    <state x="430" y="83" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1602718857159" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602716423932">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="440" y="258" width="508" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1602705791521" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602555250021">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602555250021" />
-    <state width="1323" height="86" key="GridCell.Tab.0.bottom" timestamp="1602705927054">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="86" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602705927054" />
-    <state width="1323" height="86" key="GridCell.Tab.0.center" timestamp="1602705927053">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="86" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602705927053" />
-    <state width="1323" height="86" key="GridCell.Tab.0.left" timestamp="1602705927053">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="86" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602705927053" />
-    <state width="1323" height="86" key="GridCell.Tab.0.right" timestamp="1602705927054">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="86" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602705927054" />
-    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602606031271">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="289" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1602606031271" />
-    <state x="526" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1602525278945">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="526" y="121" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1602525278945" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1602702790217">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1602702790217" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602441720140">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602441720140" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602716423932" />
   </component>
 </project>

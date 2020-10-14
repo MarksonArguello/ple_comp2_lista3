@@ -7,6 +7,9 @@ import java.util.*;
 import br.ufrj.dcc.comp2.ple.lista_3.manipulacao_dados.*;
 import br.ufrj.dcc.comp2.ple.lista_3.manipulacao_dados.comparators.*;
 
+/**
+ * Classe responsável por criar os arquivos de ranking.
+ */
 public class Ranking {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     private List<Dado> dadosParaRankings = new ArrayList<>();
@@ -14,7 +17,11 @@ public class Ranking {
     private static final String path = "./src/br/ufrj/dcc/comp2/ple/lista_3/criacaoArquivos/Rankings/";
 
 
-
+    /**
+     * Constutor da classe, chama os métodos para a criação dos rankings
+     * @param dadosParaRankings dados usados para rankings exceto para Taxa de Crescimento
+     * @param dadosParaTaxaDeCrescimento dados usados para o ranking de Taxa de Crescimento
+     */
     public static void criarRankings(List<Dado> dadosParaRankings, List<Dado> dadosParaTaxaDeCrescimento) {
         criarRankingMenoresCasosPor100Mil(dadosParaRankings);
         criarRankingMenoresMortesPorCasos(dadosParaRankings);
@@ -23,6 +30,11 @@ public class Ranking {
         criarRankingMaioresTaxasDeCrescimento(dadosParaTaxaDeCrescimento);
     }
 
+    /**
+     * Recebe uma lista com os dados das cidades e cria um arquivo .tsv com as 10 cidades com as maiores taxas
+     * de crescimento entre o dia 01/09/2020 até 01/10/2020
+     * @param lista lista com os dados das cidades.
+     */
     private static void criarRankingMaioresTaxasDeCrescimento(List<Dado> lista) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(path+"maior_taxa_crescimento.tsv")) {
             CidadeComparator cidadeComparator = new CidadeComparator();
@@ -64,6 +76,11 @@ public class Ranking {
         }
     }
 
+    /**
+     * Recebe uma lista com os dados das cidades e cria um arquivo .tsv com as 10 cidades com as menores mortes
+     * por casos.
+     * @param lista lista com os dados das cidades.
+     */
     private static void criarRankingMenoresMortesPorCasos(List<Dado> lista) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(path+"menor_mortalidade.tsv")) {
 
@@ -94,7 +111,11 @@ public class Ranking {
         }
     }
 
-
+    /**
+     * Recebe uma lista com os dados das cidades e cria um arquivo .tsv com as 10 cidades com as maiores mortes
+     * por casos.
+     * @param lista lista com os dados das cidades.
+     */
     private static void criarRankingMaioresMortesPorCasos(List<Dado> lista) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(path+"maior_mortalidade.tsv")) {
 
@@ -118,7 +139,11 @@ public class Ranking {
         }
     }
 
-
+    /**
+     * Recebe uma lista com os dados das cidades e cria um arquivo .tsv com as 10 cidades com as maiores casos
+     * por 100 mil habitantes.
+     * @param lista lista com os dados das cidades.
+     */
     private static void criarRankingMaioresCasosPor100Mil(List<Dado> lista) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(path+"maior_casos_100k.tsv")) {
 
@@ -137,11 +162,15 @@ public class Ranking {
         } catch (IOException e) {
             System.out.println(e + " Erro ao abrir ou fechar arquivo Ranking Maiores Casos Por 100 Mil.");
         } catch (RuntimeException e) {
-            System.out.println(e);
             System.out.println(e + "Sem permissão para abrir o arquivo para criar o Ranking Maiores Casos Por 100 Mil");
         }
     }
 
+    /**
+     * Recebe uma lista com os dados das cidades e cria um arquivo .tsv com as 10 cidades com as menores mortes
+     * por casos.
+     * @param lista lista com os dados das cidades.
+     */
     private static void criarRankingMenoresCasosPor100Mil(List<Dado> lista) {
         try (FileOutputStream fileOutputStream = new FileOutputStream(path+"menor_casos_100k.tsv")) {
 
@@ -160,7 +189,6 @@ public class Ranking {
         } catch (IOException e) {
             System.out.println(e + " Erro ao abrir ou fechar arquivo Ranking Menores Casos Por 100 Mil.");
         } catch (RuntimeException e) {
-            System.out.println(e);
             System.out.println(e + " Sem permissão para abrir o arquivo para criar o Ranking Menores Casos Por 100 Mil");
         }
     }

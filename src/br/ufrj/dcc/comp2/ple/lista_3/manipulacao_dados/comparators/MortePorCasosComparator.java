@@ -4,6 +4,9 @@ import br.ufrj.dcc.comp2.ple.lista_3.manipulacao_dados.Dado;
 
 import java.util.Comparator;
 
+/**
+ * Classe que representa um comparador de morte por casos
+ */
 public class MortePorCasosComparator implements Comparator<Dado> {
 
     @Override

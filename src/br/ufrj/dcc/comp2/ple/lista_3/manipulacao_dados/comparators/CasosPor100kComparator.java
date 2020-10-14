@@ -4,6 +4,9 @@ import br.ufrj.dcc.comp2.ple.lista_3.manipulacao_dados.Dado;
 
 import java.util.Comparator;
 
+/**
+ * Classe que representa um comparador de casos por 100 mil habitantes
+ */
 public class CasosPor100kComparator implements Comparator<Dado> {
     @Override
     public int compare(Dado c1, Dado c2) {
