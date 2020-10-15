@@ -18,7 +18,7 @@ public class Ranking {
 
 
     /**
-     * Constutor da classe, chama os métodos para a criação dos rankings
+     * Método que chama os métodos para a criação dos rankings
      * @param dadosParaRankings dados usados para rankings exceto para Taxa de Crescimento
      * @param dadosParaTaxaDeCrescimento dados usados para o ranking de Taxa de Crescimento
      */
